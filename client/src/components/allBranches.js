@@ -26,7 +26,7 @@ export default function AllBranches(){
     const deleteBranch = async(id) => {
         const deletion = await axios.delete(`http://localhost:5000/branch/delete/${id}`);
         if(deletion){
-            window.location = "/"
+            window.location = "/branches"
         }
     }
 
