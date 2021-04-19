@@ -1,7 +1,7 @@
 import React, {useState}  from 'react';
 import axios from 'axios';
 import {getUser} from '../../utils/common';
-import '../styles.css';
+import '../../css/it19951386.css';
 
 export default function CustomerPasswordReset(props) {
     const [password, setpassword] = useState("");

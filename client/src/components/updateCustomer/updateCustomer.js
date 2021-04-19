@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import axios from 'axios'
+import '../../css/it19951386.css';
 
 export default function UpdateCustomer(props) {
     const [fname, setfname] = useState("");

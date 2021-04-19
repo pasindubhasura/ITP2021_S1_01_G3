@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
-import '../styles.css';
+import '../../css/it19951386.css';
 
 export default function CustomerRegister(props) {
 

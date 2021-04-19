@@ -1,7 +1,7 @@
 import React, {useState,useEffect}  from 'react';
 import axios from 'axios';
 import {getUser, removeUser} from '../../utils/common';
-import '../styles.css';
+import '../../css/it19951386.css';
 
 
 export default function CustomerUserProfile(props) {
@@ -77,8 +77,8 @@ export default function CustomerUserProfile(props) {
     }
     return (
         <div name="userDetails-form">
-            <a href='#'><button className="btn green-btn">My Constructions</button></a>
-            <a href='#'><button className="btn green-btn">My Orders</button></a>
+            <button className="btn green-btn">My Constructions</button>
+            <button className="btn green-btn">My Orders</button>
             <form className="form-group myForm">
                 <h2>User Profile</h2>
                 <button className="btn-danger btn" id="logout-btn" onClick={logoutHandler}>Log out</button>

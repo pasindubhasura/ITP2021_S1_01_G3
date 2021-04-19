@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
-import '../styles.css';
+import '../../css/it19951386.css';
 
 export default function AddCustomer() {
     const [fname, setfname] = useState("");

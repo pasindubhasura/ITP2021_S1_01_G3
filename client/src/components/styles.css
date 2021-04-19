@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+/*style header*/
+#header{
+    background-color:#828282 ;
+    color: #ffffff;
+}
 
-*{margin: 0; padding: 0; font-family: 'Quicksand', 'sans-serif'; font-weight: bold;}
+/*style forms*/
 .myForm{
     width: 70%;
     margin: 50px auto;
@@ -8,79 +12,87 @@
     box-shadow: 5px 8px 20px #888888;
     padding: 25px;
     top: 50%;
-    
 }
-.myTable{
-    width: 100%;
+
+.myForm h2{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.myForm .my-btn{
+    display: block;
+    margin: 5px auto;
+    background-color:#828282 ;
+    color: #ffffff;
+}
+
+.assignForm{
+    width: 30%;
+    margin: 50px 90px;
+    border: 1px solid transparent;
+    box-shadow: 5px 8px 20px #888888;
+    padding: 25px;
+    top: 50%;
+    float: left;
+}
+
+
+.assignForm .my-btn{
+    display: block;
+    margin: 5px auto;
+    background-color:#828282 ;
+    color: #ffffff;
+}
+
+/*style tables*/
+.displayTable{
+    width: 80%;
     margin: 50px auto;
     border: 1px solid transparent;
     box-shadow: 5px 8px 20px #888888;
     padding: 25px;
     top: 50%;
 }
-.myTable h2 {
-    text-align: center;
-    font-weight: bolder;
-    margin-bottom: 50px;
-}
-.btn{
-    margin: 5px;
-}
-.btn:hover{
-    color: black;
-}
-.green-btn{
-    background-color: #4caf50;
-    color: white;
-    margin-top: 20px;
-}
-.myForm h2{
-text-align: center;
-font-weight: bolder;
-}
-.btn-section{
-    text-align: center;
-}
-#logout-btn{
-    display: block;
-    margin: auto;
-}
-.myForm .my-btn {
+
+.displayTable .my-btn{
     display: block;
     margin: 5px auto;
+    background-color:#828282 ;
+    color: #ffffff;
+}
 
+/*style display views AND download view*/
+.display-branch-view{
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 1px 1px #888888; 
+    padding: 25px;
+    top: 50%;
 }
-.center-text{
-    text-align: center;
+.display-view-download{
+    width: 70%;
+    margin: 50px auto;
+    border: 1px solid transparent;
+    padding: 25px;
+    top: 50%;
 }
-#search-filter{
+.display-view-download .my-btn{
+    display: block;
+    margin: 5px auto;
+    background-color:#828282 ;
+    color: #ffffff;
+}
+ .view-download{
+    width: 70%;
+    margin: 25px auto;
+    border: 1px solid #888888;
+    padding: 10px;
+} 
+.view-download .my-btn{
+    display: block;
+    margin: 5px auto;
+    background-color:#828282 ;
+    color: #ffffff;
     float: right;
-    width: 25%;
-}
-#table{
-    width: 100%;
-    border-collapse: collapse;
-    
-}
-td, th{
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
-}
-td{
-    font-weight: normal;
-}
-.alert{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.btn-section .green-btn{
-    margin: 0;
-}
-.alert .alert-danger{
-    font-size: small;
-}
-.ash-btn{
-    background-color: #828282;
-    color: white;
 }

@@ -2,7 +2,7 @@ import React, {useState}  from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import {setUserSession} from '../../utils/common';
-import '../styles.css';
+import '../../css/it19951386.css';
 
 export default function CustomerLogin(props) {
 const [email, setemail] = useState("");
