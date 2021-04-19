@@ -54,7 +54,7 @@ export default function CustomerPasswordReset(props) {
             <input className="form-control" type="password" value={repassword} onChange={(e) => setrepassword(e.target.value.trim())} /><br/> 
 
             <div className="btn-section">
-            <input id="resetPassword" type="button" value="Reset" onClick={resetPassword} className="ash-btn btn" />
+            <input id="resetPassword" type="button" value="Reset" onClick={resetPassword} className="green-btn btn" />
             <input id="cancelButton2" type="button" value="Cancel" onClick={cancelReset} className="btn-primary btn" />
             </div>
             </form>

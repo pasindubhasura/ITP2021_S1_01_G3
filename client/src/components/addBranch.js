@@ -21,7 +21,7 @@ export default function AddBranch(){
             email
         }
 
-        axios.post("http://localhost:8070/branch/add", newBranch).then(()=> {
+        axios.post("http://localhost:5000/branch/add", newBranch).then(()=> {
             alert("Branch added!");
         }).catch((error)=> {
             alert(error);

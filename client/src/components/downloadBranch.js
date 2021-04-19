@@ -6,8 +6,9 @@ export default function AddBranch(){
 
 
     return (
+        <div>
+        <Header/>
         <div className = "view-download">
-            <Header/>
             <center><h2>Branch Report</h2></center>
             <button  type="submit" className="btn my-btn">DOWNLOAD</button>
             <div className= "display-branch-view">
@@ -30,7 +31,7 @@ export default function AddBranch(){
                     </table>
                 </div>
             </div>
-           
+        </div>
         </div>
     )
 

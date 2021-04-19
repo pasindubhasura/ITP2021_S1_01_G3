@@ -84,3 +84,8 @@ td{
     background-color: #828282;
     color: white;
 }
+td .my-btn {
+    margin: 2px auto;
+    text-align: center;
+    width: 90%; 
+}

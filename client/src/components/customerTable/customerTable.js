@@ -54,15 +54,15 @@ export default function CustomerTable() {
         doc.text(`Customer Details Report`, 105, 13, null, null, "center");
         doc.setFontSize(10);
         doc.text(`(Generated on ${time})`, 105, 17, null, null, "center");
-        doc.setFontSize(14);
-        // doc.text("Thilina Hardware", 105, 20, null, null, "center");
-        // doc.text("No 55, Main Road, Horana", 105, 25, null, null, "center"); 
+        doc.setFontSize(12);
+        doc.text("Thilina Hardware - No 55, Main Road, Horana", 105, 22, null, null, "center");
+        //doc.text("No 55, Main Road, Horana", 105, 30, null, null, "center"); 
         //doc.addImage(img, "JPEG",0,20);
         doc.autoTable({
             theme : 'grid',
             styles: {halign:'center'},
             headStyles:{fillColor:[12, 113, 250]},
-            startY:22,
+            startY:27,
             head: [['Customer ID','Fname','Lname', 'Email', 'Address', 'Phone No']],
             body: bodyData
         })
