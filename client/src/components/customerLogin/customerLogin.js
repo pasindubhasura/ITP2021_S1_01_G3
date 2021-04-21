@@ -37,33 +37,33 @@ const formHandler = async(e) => {
 } 
     return (
         <div>
-            <form onSubmit={formHandler} className="myForm form-group">
+            <form onSubmit={formHandler} className="it19951386-myForm form-group">
             <h2>Customer Login Form</h2>
                 {errors ? errors.map((error) => {
                     return (
-                        <div class="alert alert-danger" role="alert">
+                        <div className="alert alert-danger" role="alert">
                             {error.msg}
                       </div>
                     )
                 }):null}
                 {emailerror ? 
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger" role="alert">
                     {emailerror}
                     </div>: null}
                 {logoutMsg ? 
-                <div class="alert alert-success" role="alert">
+                <div className="alert alert-success" role="alert">
                 {logoutMsg}
                 </div> : null}
                 {regMsg ? 
-                <div class="alert alert-success" role="alert">
+                <div className="alert alert-success" role="alert">
                 {regMsg}
                 </div> : null}
                 <label>Email</label>
                 <input className="form-control" type="email" onChange={(e) => setemail(e.target.value)} value={email}/><br/>
                 <label>Password</label>
                 <input className="form-control" type="password" onChange={(e) => setpassword(e.target.value)} value={password}/><br/> 
-                <p className="center-text">Don't have an account? <Link to="/customer/register">Register here</Link></p>               
-                <input type="submit" value="Log in" className="btn btn-primary my-btn"/>
+                <p className="it19951386-centerDiv">Don't have an account? <Link to="/customer/register">Register here</Link></p>               
+                <div className='it19951386-centerDiv'><input type="submit" value="Log in" className="btn btn-primary it19951386-mybtn"/></div>
             </form>
         </div>
         

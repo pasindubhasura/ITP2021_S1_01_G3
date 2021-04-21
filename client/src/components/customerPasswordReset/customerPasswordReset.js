@@ -34,7 +34,7 @@ export default function CustomerPasswordReset(props) {
 
     return (
         <div name="password-form">
-            <form className="form-group myForm">
+            <form className="form-group it19951386-myForm">
             <h2>Reset Password</h2>
             {errors ? errors.map((error) => {
                     return (
@@ -53,8 +53,8 @@ export default function CustomerPasswordReset(props) {
             <label>Re-type Password</label>   
             <input className="form-control" type="password" value={repassword} onChange={(e) => setrepassword(e.target.value.trim())} /><br/> 
 
-            <div className="btn-section">
-            <input id="resetPassword" type="button" value="Reset" onClick={resetPassword} className="green-btn btn" />
+            <div className="it19951386-btn-section">
+            <input id="resetPassword" type="button" value="Reset" onClick={resetPassword} className="it19951386-green-btn btn" style={{marginRight:'5px'}}/>
             <input id="cancelButton2" type="button" value="Cancel" onClick={cancelReset} className="btn-primary btn" />
             </div>
             </form>

@@ -42,17 +42,17 @@ export default function AddCustomer() {
 
     return (
         <div>
-            <form onSubmit={customerFormSubmit} className="form-group myForm">
+            <form onSubmit={customerFormSubmit} className="form-group it19951386-myForm">
             <h2>Add New Customer</h2>
                 {errors ? errors.map((error) => {
                     return (
-                        <div class="alert alert-danger" role="alert">
+                        <div className="alert alert-danger it19951386-alert" role="alert">
                             {error.msg}
                       </div>
                     )
                 }):null}
                 {emailerror ? 
-                <div class="alert alert-danger" role="alert">
+                <div className="alert alert-danger it19951386-alert" role="alert">
                     {emailerror}
                     </div>: null}
                 <label>First Name</label>
@@ -67,13 +67,15 @@ export default function AddCustomer() {
                 <input className="form-control" type="text" name="pNo" onChange={(e) => {setpNo(e.target.value);}} value={pNo}/><br/>
                 <label>Password</label>
                 <input className="form-control" type="password" name = "password" onChange={(e) => {setpassword(e.target.value);}} value={password}/>
-                <button className="btn ash-btn my-btn" id="customerAddBtn">Add 
+                <div className="it19951386-centerDiv">
+                <button className="btn it19951386-green-btn it19951386-mybtn it19951386-btn" id="customerAddBtn">Add 
                 </button>
-                <button className="btn ash-btn my-btn" id="customerAddLoadingBtn" hidden>
+                <button className="btn it19951386-green-btn it19951386-mybtn" id="customerAddLoadingBtn" hidden>
                 <span className="spinner-border spinner-border-sm " id="loading" role="status" aria-hidden="true" style={{"margin-right":"5px"}}>
                 </span>
                 Adding
                 </button>
+                </div>
             </form>
         </div>
     )

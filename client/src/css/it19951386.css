@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 *{margin: 0; padding: 0; font-family: 'Quicksand', 'sans-serif'; font-weight: bold;}
-.myForm{
+.it19951386-myForm{
     width: 70%;
     margin: 50px auto;
     border: 1px solid transparent;
@@ -10,7 +10,7 @@
     top: 50%;
     
 }
-.myTable{
+.it19951386-myTable{
     width: 100%;
     margin: 50px auto;
     border: 1px solid transparent;
@@ -18,74 +18,78 @@
     padding: 25px;
     top: 50%;
 }
-.myTable h2 {
+.it19951386-myTable h2 {
     text-align: center;
     font-weight: bolder;
     margin-bottom: 50px;
 }
-.btn{
+.it19951386-btn{
     margin: 5px;
 }
-.btn:hover{
+.it19951386-btn:hover{
     color: black;
 }
-.green-btn{
+.it19951386-green-btn{
     background-color: #4caf50;
     color: white;
     margin-top: 20px;
+    margin-right: 5px;
 }
-.myForm h2{
+.it19951386-myForm h2{
 text-align: center;
 font-weight: bolder;
 }
-.btn-section{
+.it19951386-btn-section{
     text-align: center;
 }
-#logout-btn{
+#it19951386-logout-btn{
     display: block;
-    margin: auto;
+    margin: 20px auto;
 }
-.myForm .my-btn {
+.it19951386-myForm .it19951386-mybtn {
     display: block;
     margin: 5px auto;
 
 }
-.center-text{
+.it19951386-center-text{
     text-align: center;
 }
-#search-filter{
+#it19951386-search-filter{
     float: right;
     width: 25%;
 }
-#table{
+#it19951386-table{
     width: 100%;
     border-collapse: collapse;
     
 }
-td, th{
+.it19951386-td, .it19951386-th{
     border: 1px solid black;
     text-align: left;
     padding: 8px;
 }
-td{
+.it19951386-td{
     font-weight: normal;
 }
-.alert{
+.it19951386-alert{
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.btn-section .green-btn{
+.it19951386-btn-section .it19951386-green-btn{
     margin: 0;
 }
-.alert .alert-danger{
-    font-size: small;
-}
-.ash-btn{
+.it19951386-ash-btn{
     background-color: #828282;
     color: white;
+
 }
-td .my-btn {
+.it19951386-td .it19951386-mybtn {
     margin: 2px auto;
     text-align: center;
     width: 90%; 
+}
+
+.it19951386-centerDiv{
+    display: flex;
+    justify-content: center;
 }

@@ -82,11 +82,11 @@ export default function CustomerUserProfile(props) {
     }
     return (
         <div name="userDetails-form">
-            <button className="btn green-btn">My Constructions</button>
-            <button className="btn green-btn">My Orders</button>
-            <form className="form-group myForm">
+            <button className="btn it19951386-green-btn">My Constructions</button>
+            <button className="btn it19951386-green-btn">My Orders</button>
+            <form className="form-group it19951386-myForm">
                 <h2>User Profile</h2>
-                <button className="btn-danger btn" id="logout-btn" onClick={logoutHandler}>Log out</button>
+                <button className="btn-danger btn" id="it19951386-logout-btn" onClick={logoutHandler}>Log out</button>
                 {errors ? errors.map((error) => {
                     return (
                         <div class="alert alert-danger" role="alert">
@@ -117,10 +117,10 @@ export default function CustomerUserProfile(props) {
                 <label>Phone No</label>
                 <input className="form-control" type="text" onChange={(e) => setphone(e.target.value)} value={pNo} disabled/><br/> 
 
-                <div className="btn-section">
-                    <input id="editButton" type="button" value="Edit Details" onClick={personalInfoForm} className="green-btn btn"/>
+                <div className="it19951386-btn-section">
+                    <input id="editButton" type="button" value="Edit Details" onClick={personalInfoForm} className="it19951386-green-btn btn" style={{marginRight:'5px'}}/>
                     <input id="resetButton" type="button" value="Reset Password" onClick={resetButton} className="btn-primary btn"/>
-                    <input id="updateButton" type="button" value="Update" onClick={editData} className="green-btn btn" hidden/>
+                    <input id="updateButton" type="button" value="Update" onClick={editData} className="it19951386-green-btn btn" style={{marginRight:'5px'}} hidden/>
                     <input id="cancelButton" type="button" value="Cancel" onClick={cancelUpdate} className="btn-danger btn" hidden/>
                 </div>
             </form>
