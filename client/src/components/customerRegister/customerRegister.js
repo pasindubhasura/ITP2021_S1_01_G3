@@ -25,7 +25,8 @@ export default function CustomerRegister(props) {
             seterrors(response.data.errors);
         }
         if(response.data.success){
-            props.history.push({pathname:'/customer/login'});          
+            localStorage.setItem('regMsg', "You have successfully registered! Please login to continue");
+            window.location = '/customer/login';
         }
         if(response.data.emailerror){
             setemailerror(response.data.emailerror);

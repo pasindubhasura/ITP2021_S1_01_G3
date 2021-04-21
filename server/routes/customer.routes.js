@@ -28,7 +28,7 @@ router.get('/edit/:id', async(req, res) => {
     const id = req.params.id;
     
     try{
-        const customer = await Customer.findById(id);
+        const customer = await Customer.findOne({cus_id:id});
         res.json(customer);
         
     }catch (error) {
@@ -57,7 +57,7 @@ router.post('/edit/:id', validator.validate('editUser'), async(req, res) => {
     //
     try {
         hashedPassword = await bcrypt.hash(password, 10);
-        const customer = await Customer.findById(id);
+        const customer = await Customer.findOne({cus_id:id});
         customer.fname = fname;
         customer.lname = lname;
         customer.email = email;
@@ -95,7 +95,7 @@ router.post('/edit/:id', validator.validate('editUser'), async(req, res) => {
             html: emailHTML
         };
         await transporter.sendMail(mailOptions);
-        res.json({"success": "Acoount update is successfull"});
+        res.json({"success": "Acoount update is successfull","cus_id":id});
     } catch (errors) {
         res.json(errors);
     } 
@@ -126,36 +126,36 @@ router.post('/add', validator.validate('addUser'),async(req, res) => {
             //const count = await Customer.countDocuments();
             hashedPassword = await bcrypt.hash(password, 10);
  
-                cus_id = await generateCusID.call();
-                const newCustomer = new Customer({cus_id,fname,lname,email,hashedPassword,address,pNo});
-                await newCustomer.save();
+            cus_id = await generateCusID.call();
+            const newCustomer = new Customer({cus_id,fname,lname,email,hashedPassword,address,pNo});
+            await newCustomer.save();
 
-                const transporter = nodemailer.createTransport({
-                    host: "smtp.gmail.com",
-                    port: 465,
-                    secure: true,
-                    auth: {
-                        user: 'spremadasa334@gmail.com',
-                        pass: 'sajith123'
-                    }
-                });
-
-                const emailHTML = `Hi ${newCustomer.fname} ${newCustomer.lname}😃,<br><br>
-                An account has been created for you on our website! Please use this email and password to log in to our website.<br><br>
-                Email:- ${newCustomer.email}<br>
-                Password:- ${password}<br><br>
-                Thank you!<br>
-                Thilina Hardware.`;
-                const mailOptions = {
-                    from: 'spremadasa334@gmail.com',
-                    to: `${email}`,
-                    subject: 'Welcome to Thilina Hardware!😃',
-                    html: emailHTML
-                };
-
-                await transporter.sendMail(mailOptions);
-                res.json({"success": "Acoount creation is successfull"});
+            const transporter = nodemailer.createTransport({
+                host: "smtp.gmail.com",
+                port: 465,
+                secure: true,
+                auth: {
+                    user: 'spremadasa334@gmail.com',
+                    pass: 'sajith123'
                 }
+            });
+
+            const emailHTML = `Hi ${newCustomer.fname} ${newCustomer.lname}😃,<br><br>
+            An account has been created for you on our website! Please use this email and password to log in to our website.<br><br>
+            Email:- ${newCustomer.email}<br>
+            Password:- ${password}<br><br>
+            Thank you!<br>
+            Thilina Hardware.`;
+            const mailOptions = {
+                from: 'spremadasa334@gmail.com',
+                to: `${email}`,
+                subject: 'Welcome to Thilina Hardware!😃',
+                html: emailHTML
+            };
+
+            await transporter.sendMail(mailOptions);
+            res.json({"success": "Acoount creation is successfull","cus_id": cus_id});
+            }
                    
     } catch (errors) {
         res.json(errors);   

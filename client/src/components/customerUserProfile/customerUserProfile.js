@@ -13,6 +13,11 @@ export default function CustomerUserProfile(props) {
     const id = getUser();
     const [errors, seterrors] = useState([]);
     const [emailerror, setemailerror] = useState("");   
+    const[loginMsg] = useState(localStorage.getItem("loginMsg"));//this sets logout msg if any
+
+    window.onload = function() {
+        localStorage.removeItem("loginMsg")
+    }//this resets the state on refreshing
 
   
     useEffect(() => {
@@ -22,7 +27,7 @@ export default function CustomerUserProfile(props) {
             setlastName(customer.lname); 
             setemail(customer.email); 
             setaddress(customer.address);  
-            setphone(customer.pNo);    
+            setphone("0"+customer.pNo);    
         }
         fetchData();
     },[id])
@@ -72,8 +77,8 @@ export default function CustomerUserProfile(props) {
     }
     const logoutHandler = () => {
         removeUser();
-        localStorage.setItem('success', 'You have successfully logged out!');
-        props.history.push({pathname:'/customer/login'});
+        localStorage.setItem('logoutMsg', 'You have successfully logged out!');
+        window.location = '/customer/login'
     }
     return (
         <div name="userDetails-form">
@@ -92,7 +97,11 @@ export default function CustomerUserProfile(props) {
                 {emailerror ? 
                 <div class="alert alert-danger" role="alert">
                     {emailerror}
-                    </div>: null}
+                </div>: null}
+                {loginMsg ? 
+                <div class="alert alert-success" role="alert">
+                {loginMsg}
+                </div> : null}
                 <label>First name</label>
                 <input className="form-control" type="text" onChange={(e) => setfirstName(e.target.value)} value={fname} disabled/><br/>  
 

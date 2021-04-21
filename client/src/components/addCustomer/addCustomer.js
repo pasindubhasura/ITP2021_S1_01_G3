@@ -29,6 +29,7 @@ export default function AddCustomer() {
         if(response.data.success){
             document.getElementById('customerAddLoadingBtn').setAttribute("hidden","true");
             document.getElementById('customerAddBtn').removeAttribute("hidden");
+            localStorage.setItem('cusAddMsg', 'You have successfully added ' + response.data.cus_id + ' ! 😃');
             window.location = "/customers";
         }
         if(response.data.emailerror){

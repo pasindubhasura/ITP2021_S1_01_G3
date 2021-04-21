@@ -19,7 +19,7 @@ export default function UpdateCustomer(props) {
             setlname(response.lname);
             setemail(response.email);
             setaddress(response.address);  
-            setphone(response.pNo);   
+            setphone("0"+response.pNo);   
         }
         fetchData();
     },[id])
@@ -34,6 +34,7 @@ export default function UpdateCustomer(props) {
             if(response.data.success){
                 document.getElementById('customerEditLoadingBtn').setAttribute("hidden","true");
                 document.getElementById('customerEditBtn').removeAttribute("hidden");
+                localStorage.setItem('cusUpMsg', 'Customer record of ' +response.data.cus_id +', was updated successfully! 😃');
                 window.location = "/customers";
             }
             if(response.data.errors){

@@ -9,6 +9,12 @@ const [email, setemail] = useState("");
 const [password, setpassword] = useState("");
 const [errors, seterrors] = useState([]);
 const [emailerror, setemailerror] = useState("");
+const[logoutMsg] = useState(localStorage.getItem("logoutMsg"));//this sets logout msg if any
+const[regMsg] = useState(localStorage.getItem("regMsg"));//tis sets register msg if any
+window.onload = function() {
+    localStorage.removeItem("logoutMsg")
+    localStorage.removeItem("regMsg")
+}//this resets the state on refreshing
 
 const formHandler = async(e) => {
     e.preventDefault();
@@ -21,6 +27,7 @@ const formHandler = async(e) => {
     }
     if(response.data.success){
         setUserSession(response.data.id,response.data.token);
+        localStorage.setItem('loginMsg', "You have successfully logged in! 😃");
         props.history.push('/customer/profile');
     }
     if(response.data.emailerror){
@@ -43,6 +50,14 @@ const formHandler = async(e) => {
                 <div class="alert alert-danger" role="alert">
                     {emailerror}
                     </div>: null}
+                {logoutMsg ? 
+                <div class="alert alert-success" role="alert">
+                {logoutMsg}
+                </div> : null}
+                {regMsg ? 
+                <div class="alert alert-success" role="alert">
+                {regMsg}
+                </div> : null}
                 <label>Email</label>
                 <input className="form-control" type="email" onChange={(e) => setemail(e.target.value)} value={email}/><br/>
                 <label>Password</label>
