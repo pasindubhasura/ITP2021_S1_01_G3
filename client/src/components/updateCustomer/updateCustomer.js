@@ -46,7 +46,7 @@ export default function UpdateCustomer(props) {
  
     return (
         <div>
-            <form onSubmit={customerFormSubmit} className="form-group myForm">
+            <form onSubmit={customerFormSubmit} className="form-group it19951386-myForm">
                 <h2>Edit Customer Details</h2>
                 {errors ? errors.map((error) => {
                     return (
@@ -67,9 +67,9 @@ export default function UpdateCustomer(props) {
                 <input className="form-control" type="text" name="pNo" onChange={(e) => {setphone(e.target.value);}} value={pNo}/><br/>
                 <label>Password</label>
                 <input className="form-control" type="password" name="password" onChange={(e) => {setpassword(e.target.value);}} value={password}/><br/>
-                <button className="btn ash-btn my-btn" id="customerEditBtn">Update 
+                <button className="btn it19951386-green-btn it19951386-mybtn" id="customerEditBtn">Update 
                 </button>
-                <button className="btn ash-btn my-btn" id="customerEditLoadingBtn" hidden disabled>
+                <button className="btn it19951386-green-btn it19951386-mybtn" id="customerEditLoadingBtn" hidden disabled>
                 <span className="spinner-border spinner-border-sm" id="loading" role="status" aria-hidden="true" style={{"margin-right":"5px"}}>
                 </span>
                 Updating

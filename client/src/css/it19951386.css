@@ -9,6 +9,7 @@
     padding: 25px;
     top: 50%;
     
+    
 }
 .it19951386-myTable{
     width: 100%;
@@ -17,6 +18,7 @@
     box-shadow: 5px 8px 20px #888888;
     padding: 25px;
     top: 50%;
+
 }
 .it19951386-myTable h2 {
     text-align: center;
@@ -58,19 +60,35 @@ font-weight: bolder;
     float: right;
     width: 25%;
 }
-#it19951386-table{
+.it19951386-table{
     width: 100%;
-    border-collapse: collapse;
-    
-}
-.it19951386-td, .it19951386-th{
+    border-collapse:collapse;
+    margin-top: 30px;
+    border-radius: 10px;
     border: 1px solid black;
+    overflow: hidden;
+    box-shadow: 5px 8px 20px #888888;
+}
+
+.it19951386-td, .it19951386-th{
+    /* border: 1px solid black; */
     text-align: left;
     padding: 8px;
 }
+
+.it19951386-th{
+    /* border: 1px solid black; */
+    text-align: left;
+    padding: 10px;
+}
 .it19951386-td{
     font-weight: normal;
+    border-bottom: 1px #dedede solid;
 }
+.it19951386-tbody .it19951386-tr:hover{
+    background-color: #ededed;
+}
+
 .it19951386-alert{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -92,4 +110,14 @@ font-weight: bolder;
 .it19951386-centerDiv{
     display: flex;
     justify-content: center;
+}
+.it19951386-thead{
+    background-color: #4caf50;
+    color: white;
+    
+}
+.it19951386-h2{
+    text-align: center;
+    margin: 30px 0;
+    font-weight: bolder;
 }
