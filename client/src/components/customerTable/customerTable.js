@@ -59,7 +59,7 @@ export default function CustomerTable() {
 
         let bodyData = [];
         for(let i = 0; customers.length > i ; i++){
-            bodyData.push([customers[i].cus_id,customers[i].fname,customers[i].lname, customers[i].email, customers[i].address, customers[i].pNo]);
+            bodyData.push([customers[i].cus_id,customers[i].fname,customers[i].lname, customers[i].email, customers[i].address, "0"+customers[i].pNo]);
         }//save json data to bodydata in order to print in the pdf table
 
         const doc = new jsPDF({orientation:"portrait"});
@@ -75,7 +75,7 @@ export default function CustomerTable() {
         doc.autoTable({
             theme : 'grid',
             styles: {halign:'center'},
-            headStyles:{fillColor:[12, 113, 250]},
+            headStyles:{fillColor:[71, 201, 76]},
             startY:27,
             head: [['Customer ID','Fname','Lname', 'Email', 'Address', 'Phone No']],
             body: bodyData

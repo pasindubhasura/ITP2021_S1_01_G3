@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
+
 *{margin: 0; padding: 0; font-family: 'Quicksand', 'sans-serif'; font-weight: bold;}
 .it19951386-myForm{
     width: 70%;
@@ -117,6 +118,7 @@ font-weight: bolder;
 }
 .it19951386-headerSection{
     width: 100%;
+    margin-bottom: 20px;
 }
 .it19951386-headerSection #it19951386-search-filter{
     float: right;
