@@ -62,8 +62,8 @@ const formHandler = async(e) => {
                 <input className="form-control" type="email" onChange={(e) => setemail(e.target.value)} value={email}/><br/>
                 <label>Password</label>
                 <input className="form-control" type="password" onChange={(e) => setpassword(e.target.value)} value={password}/><br/> 
-                <p className="it19951386-centerDiv">Don't have an account? <Link to="/customer/register">Register here</Link></p>               
-                <div className='it19951386-centerDiv'><input type="submit" value="Log in" className="btn btn-primary it19951386-mybtn"/></div>
+                <p className="it19951386-centerDiv">Don't have an account? <Link className="it19951386-link" to="/customer/register"> Register here</Link></p>               
+                <div className='it19951386-centerDiv'><input type="submit" value="Log in" className="btn it19951386-green-btn it19951386-mybtn"/></div>
             </form>
         </div>
         

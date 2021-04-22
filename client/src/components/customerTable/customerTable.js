@@ -34,7 +34,7 @@ export default function CustomerTable() {
     
     const deleteCustomer = async(id,cusID) => {
         let deletion;
-        // alert("Are sure want to delete " + cusID + " ?")
+   
         if(window.confirm("Are you sure about deleting " + cusID + " ?")){
             deletion = await axios.delete(`http://localhost:5000/customers/delete/${id}`);
         }
@@ -84,7 +84,7 @@ export default function CustomerTable() {
     }//report generation function
 
     return(
-    <div>
+    <div className="it19951386-containner">
         <h2 className="it19951386-h2">Customer Managment</h2>
         <div className="it19951386-headerSection">
         <Link to="/customer/add" className="btn it19951386-green-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-plus-fill" viewBox="0 0 16 16">
@@ -108,6 +108,7 @@ export default function CustomerTable() {
         <div class="alert alert-success" role="alert">
         {cusUpMsg}
         </div> : null}
+        <div className="it19951386-myTable">
         <table className="it19951386-table">
             <thead className="it19951386-thead">
                 <tr >
@@ -137,7 +138,7 @@ export default function CustomerTable() {
                                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                     <path fillRule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
                                     </svg> Update</Link>
-                                    <button onClick={() => deleteCustomer(customer._id,customer.cus_id)} className="btn btn-danger it19951386-mybtn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash-fill" viewBox="0 0 16 16">
+                                    <button onClick={() => deleteCustomer(customer._id,customer.cus_id)} className="btn btn-danger it19951386-mybtn it19951386-red-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trash-fill" viewBox="0 0 16 16">
                                     <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/></svg>
                                     Delete</button>
                                 </td>
@@ -146,6 +147,7 @@ export default function CustomerTable() {
                     })}   
             </tbody>
         </table>
+        </div>
     </div>
     );
 }

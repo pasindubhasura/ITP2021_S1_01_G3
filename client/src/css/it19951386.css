@@ -12,13 +12,8 @@
     
 }
 .it19951386-myTable{
-    width: 100%;
-    margin: 50px auto;
-    border: 1px solid transparent;
-    box-shadow: 5px 8px 20px #888888;
-    padding: 25px;
-    top: 50%;
-
+    /* overflow-x: auto; */
+    
 }
 .it19951386-myTable h2 {
     text-align: center;
@@ -36,6 +31,7 @@
     color: white;
     margin-top: 20px;
     margin-right: 5px;
+    border: #4caf50 2px solid;
 }
 .it19951386-myForm h2{
 text-align: center;
@@ -56,10 +52,7 @@ font-weight: bolder;
 .it19951386-center-text{
     text-align: center;
 }
-#it19951386-search-filter{
-    float: right;
-    width: 25%;
-}
+
 .it19951386-table{
     width: 100%;
     border-collapse:collapse;
@@ -68,6 +61,7 @@ font-weight: bolder;
     border: 1px solid black;
     overflow: hidden;
     box-shadow: 5px 8px 20px #888888;
+    
 }
 
 .it19951386-td, .it19951386-th{
@@ -121,9 +115,17 @@ font-weight: bolder;
     margin: 30px 0;
     font-weight: bolder;
 }
+.it19951386-headerSection{
+    width: 100%;
+}
+.it19951386-headerSection #it19951386-search-filter{
+    float: right;
+    width: 25%;
+}
 .it19951386-headerSection .it19951386-green-btn{
     margin: 0;
     margin-right: 5px;
+    float: left;
 }
 .it19951386-trans-green-btn{
     background-color: transparent;
@@ -133,4 +135,23 @@ font-weight: bolder;
 .it19951386-trans-green-btn:hover{
     background-color: #4caf50;
     color: white;
+}
+.it19951386-containner{
+    width: 82%;
+    margin: 0 auto;    
+}
+.it19951386-link{
+    color: #10a115;
+}
+.it19951386-link:hover{
+    color: #2b5c2d;
+}
+.it19951386-green-btn:hover{
+    background-color: transparent;
+    border: 2px #4caf50 solid;
+    color: #4caf50;
+}
+.it19951386-red-btn:hover{
+    background-color: transparent;
+    color: red;
 }

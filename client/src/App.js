@@ -21,7 +21,7 @@ import DownloadBranches from './components/downloadBranch';
 
 function App() {
   return (
-    <div className="container">
+    <div >
     <Router>
       {/*customers */}
       <Route exact path="/customers" component = {CustomerTable} exact></Route>

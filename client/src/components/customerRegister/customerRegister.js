@@ -61,8 +61,8 @@ export default function CustomerRegister(props) {
                 <input type="text" className="form-control" name="pNo" onChange={(e) => {setpNo(e.target.value);}} value={pNo}/><br/>
                 <label>Password</label>
                 <input type="password" className="form-control" name = "password" onChange={(e) => {setpassword(e.target.value);}} value={password}/><br/>
-                <p className="center-text">Already have an account? <Link to="/customer/login">Login here</Link></p>
-                <input type="submit" value="Register" className="btn btn-primary my-btn"/><br/>
+                <p className="it19951386-centerDiv">Already have an account? <Link className="it19951386-link" to="/customer/login"> Login here</Link></p>
+                <div className="it19951386-centerDiv"><input type="submit" value="Register" className="btn it19951386-green-btn it19951386-mybtn "/></div><br/>
             </form>
         </div>
     )

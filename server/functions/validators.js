@@ -135,7 +135,7 @@ exports.validate = (method) => {
         body('repassword')
         .trim()
         .isLength({max:12,min:6})
-        .withMessage("Password should have 6-12 characters"),
+        .withMessage("Re-type password should have 6-12 characters"),
       ]
     }
   }

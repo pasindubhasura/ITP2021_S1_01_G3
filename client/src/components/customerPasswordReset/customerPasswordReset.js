@@ -23,9 +23,13 @@ export default function CustomerPasswordReset(props) {
         }
         if (response.data.errors) {
             seterrors(response.data.errors);
+            setpassword("")
+            setrepassword("")
         }
         if(response.data.emailerror){
             setemailerror(response.data.emailerror);
+            setpassword("")
+            setrepassword("")
         } 
     }
     const cancelReset = () => {
@@ -55,7 +59,7 @@ export default function CustomerPasswordReset(props) {
 
             <div className="it19951386-btn-section">
             <input id="resetPassword" type="button" value="Reset" onClick={resetPassword} className="it19951386-green-btn btn" style={{marginRight:'5px'}}/>
-            <input id="cancelButton2" type="button" value="Cancel" onClick={cancelReset} className="btn-primary btn" />
+            <input id="cancelButton2" type="button" value="Cancel" onClick={cancelReset} className="btn-danger it19951386-red-btn btn" />
             </div>
             </form>
         </div>
