@@ -121,3 +121,16 @@ font-weight: bolder;
     margin: 30px 0;
     font-weight: bolder;
 }
+.it19951386-headerSection .it19951386-green-btn{
+    margin: 0;
+    margin-right: 5px;
+}
+.it19951386-trans-green-btn{
+    background-color: transparent;
+    border: 2px #4caf50 solid;
+    color: #4caf50;
+}
+.it19951386-trans-green-btn:hover{
+    background-color: #4caf50;
+    color: white;
+}
